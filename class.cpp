@@ -33,7 +33,7 @@ int main(){
     hero a;
 
     //dynamic allocation
-    int 
+    int *ptr= new hero;
 
 
 
