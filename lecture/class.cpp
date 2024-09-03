@@ -9,6 +9,19 @@ class hero{
     public:
   int age;
 
+  hero(){
+    cout<<"constructor called"<<endl;
+  }
+//paramerterized constructor
+hero(int health){
+  cout<<"this->"<<this<<endl;
+  this->health=health;
+}
+hero(int health,int age){
+  cout<<"this->"<<this<<endl;
+  this->health=health;
+  this->age=age;
+}
   void print(){
     cout<<age<<endl;
   }
@@ -23,19 +36,42 @@ class hero{
 void sethealth(int h){
     health=h;
 }
-void setlevel(int ch){
+void setage(int ch){
     age=ch;
 }
 };
 
 int main(){
-    //static allocation
-    hero a;
-    a.sethealth(80);
-    a.setage(10);
+  //object created statically
 
-    //dynamic allocation
-    int *ptr= new hero;
+     hero ramesh(20); //constructor called
+     cout<<"address of ramesh"<<&ramesh<<endl;
+
+  //dynamically
+  hero *h=new hero(11);   
+
+  hero temp(22,10);
+  temp.print();
+     
+
+
+
+
+
+
+//static allocation
+//     hero a;
+//     a.sethealth(80);
+//     a.setage(10);
+//     cout<<"health is: "<<a.getHealth()<<endl;
+//     cout<<"age is: "<<a.age<<endl;
+
+//     //dynamic allocation
+//     hero *ptr= new hero;
+//     ptr->sethealth(23);
+//     ptr->setage(2);
+//  cout<<"health is: "<<(*ptr).getHealth()<<endl;
+//     cout<<"age is: "<<(*ptr).age<<endl;
 
 
 
