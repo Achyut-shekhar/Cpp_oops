@@ -19,6 +19,18 @@ string arrangeString(string str)
     return str;
     
 }
+string tolower(string str)
+{ char ch;
+     for(int i=0;str[i]!='\0';i++)
+     {
+         if(str[i]>=65&&str[i]<=90)
+         str[i]=str[i]+32;
+         
+         
+     }
+     
+     return str;
+}
 int main()
 {
     int flag;
@@ -27,6 +39,8 @@ int main()
     getline(cin,str1);
     cout<<"input the second string"<<endl;
     getline(cin,str2);
+    str1=tolower(str1);
+    str2=tolower(str2);
     str1=arrangeString(str1);
     str2=arrangeString(str2);
       for(int i=0;str1[i]!='\0';i++)
