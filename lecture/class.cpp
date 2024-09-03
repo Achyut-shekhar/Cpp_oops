@@ -31,6 +31,8 @@ void setlevel(int ch){
 int main(){
     //static allocation
     hero a;
+    a.sethealth(80);
+    a.setage(10);
 
     //dynamic allocation
     int *ptr= new hero;
