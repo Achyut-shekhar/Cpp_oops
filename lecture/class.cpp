@@ -8,11 +8,23 @@ class hero{
   int health;
     public:
   int age;
+  char *name;
 
   hero(){
-    cout<<"constructor called"<<endl;
+    cout<<"default  constructor called"<<endl;
+    name=new char[100];
   }
-//paramerterized constructor
+//copy constructor
+hero(hero &temp)
+{
+   char *ch=new char[strlen(temp.name)+1];
+   strcpy(ch,temp.name);
+   this->name=ch;
+  cout<<"copy constructor called"<<endl;
+  this->health=temp.health;
+  this->age=temp.age;
+}
+// paramerterized constructor
 hero(int health){
   cout<<"this->"<<this<<endl;
   this->health=health;
@@ -23,7 +35,9 @@ hero(int health,int age){
   this->age=age;
 }
   void print(){
+    cout<<name<<endl;
     cout<<age<<endl;
+    cout<<health<<endl;
   }
 //getter
   int getHealth(){
@@ -39,19 +53,57 @@ void sethealth(int h){
 void setage(int ch){
     age=ch;
 }
+void setname(char name[])
+{
+  strcpy(this->name,name);
+}
 };
 
-int main(){
-  //object created statically
+ int main(){
+//static
+hero a;
 
-     hero ramesh(20); //constructor called
-     cout<<"address of ramesh"<<&ramesh<<endl;
+//dynamic
+hero *b=new hero();
 
-  //dynamically
-  hero *h=new hero(11);   
 
-  hero temp(22,10);
-  temp.print();
+// hero hero1;
+// hero1.sethealth(20);
+// hero1.setage(5);
+// char name[10]="achyut";
+// hero1.setname(name);
+
+// // hero1.print();
+// //use default copy constructor
+// hero hero2;
+// // hero2.print();
+// hero1.name[0]='b';
+// hero2=hero1;
+// hero1.print();
+// hero2.print();//we didnt change the hero 2 but it changed automatically
+
+// //for copy constructor
+// hero suresh;
+// suresh.age=9;
+// suresh.sethealth(99);
+
+// hero shekh(suresh);
+// shekh.print();
+
+
+
+
+
+  // //object created statically
+
+  //    hero ramesh(20); //constructor called
+  //    cout<<"address of ramesh"<<&ramesh<<endl;
+
+  // //dynamically
+  // hero *h=new hero(11);   
+
+  // hero temp(22,10);
+  // temp.print();
      
 
 
