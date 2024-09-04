@@ -9,10 +9,16 @@ class hero{
     public:
   int age;
   char *name;
+  static int timeToCompelete;
 
   hero(){
     cout<<"default  constructor called"<<endl;
     name=new char[100];
+  }
+
+  static int random()
+  {
+    return timeToCompelete;
   }
 //copy constructor
 hero(hero &temp)
@@ -57,14 +63,28 @@ void setname(char name[])
 {
   strcpy(this->name,name);
 }
+~hero(){
+  cout<<"destructor"<<endl;
+}
 };
-
+//intialization of the class
+int hero::timeToCompelete=5;
  int main(){
-//static
-hero a;
+//accessing the static function
+cout<<hero::random<<endl;
 
-//dynamic
-hero *b=new hero();
+
+// //access the member without the object
+// cout<<hero::timeToCompelete<<endl;
+
+
+// //static
+// hero a;
+
+// //dynamic
+// hero *b=new hero();
+// //manually calling destructor
+// delete b;
 
 
 // hero hero1;
