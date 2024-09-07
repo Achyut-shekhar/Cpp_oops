@@ -101,6 +101,7 @@ int main()
     {
         cout<<"car model: "<<modelToSell<<"not found in inventory"<<endl;
     }
+    
     //update the price
     cout<<"\n\nenter the model of the car to update price"<<endl;
     cin>>modelToUpdate;
