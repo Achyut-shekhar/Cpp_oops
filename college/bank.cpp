@@ -7,7 +7,7 @@ class bank{
     int accountNum;
     float balance;
     double interest;
-
+    
     void deposit(string name,int accountNum,float balance,double interest)
     {
          this->name=name;
