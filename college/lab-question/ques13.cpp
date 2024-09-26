@@ -54,6 +54,6 @@ int main()
   saver1.display();
 
   saver2.monthlyinterest();
-  cout << "\n-----Saver1------" << endl;
+  cout << "\n-----Saver2------" << endl;
   saver2.display();
 }
