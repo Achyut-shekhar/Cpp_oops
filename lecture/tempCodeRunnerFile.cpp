@@ -1,1 +1,1 @@
-hero1=hero2;
+obj.setweight(84);
