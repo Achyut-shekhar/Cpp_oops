@@ -11,24 +11,20 @@ public:
   operatorNum operator++()
   {
     ++real;
-    return *this;
   }
   operatorNum operator++(int)
   {
-    operatorNum temp = *this; // Save the current state
-    real++;                   // Increment the real value
-    return temp;              // Return the previous state
+
+    real++; // Increment the real value
   }
   operatorNum operator--()
   {
     --real;
-    return *this;
   }
   operatorNum operator--(int)
   {
-    operatorNum temp = *this; 
-    real--;                  
-    return temp;
+
+    real--;
   }
   void display()
   {
