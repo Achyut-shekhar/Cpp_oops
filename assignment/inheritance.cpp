@@ -20,7 +20,7 @@ public:
   }
 };
 
-class marks : public student
+class marks : private student
 {
 public:
   int m1, m2, m3, m4, m5;
@@ -28,15 +28,18 @@ public:
 public:
   void setmarks(int m1, int m2, int m3, int m4, int m5)
   {
+    setinfo("achyut", 23);
+    showinfo();
     this->m1 = m1;
     this->m2 = m2;
     this->m3 = m3;
     this->m4 = m4;
     this->m5 = m5;
+    showinfo();
   }
 };
 
-class result : public marks
+class result : protected marks
 {
 private:
   int total;
@@ -45,24 +48,25 @@ private:
 public:
   void setsport(int marks)
   {
+
     sportmarks = marks;
   }
   void gettotal()
   {
+    setsport(1);
+    setmarks(1, 1, 1, 1, 1);
     total = m1 + m2 + m3 + m4 + m5 + sportmarks;
   }
   void showall()
   {
-    showinfo();
+
     gettotal();
     cout << "\ntotal " << total;
   }
 };
+
 int main()
 {
   result obj;
-  obj.setinfo("achyut", 23);
-  obj.setmarks(1, 1, 1, 1, 1);
-  obj.setsport(1);
   obj.showall();
 }
