@@ -32,6 +32,7 @@ class b : public a
 public:
   int mul3(int val)
   {
+    return val * 3;
   }
 };
 class c : public b
@@ -39,6 +40,7 @@ class c : public b
 public:
   int mul5(int val)
   {
+    return val * 5;
   }
 };
 class d : public c
@@ -71,7 +73,7 @@ public:
 int main()
 {
   d obj;
-  obj.value = 15;
+  obj.value = 30;
   obj.update_val(obj.value);
   cout << obj.count2 << " " << obj.count3 << " " << obj.count5 << endl;
 }
