@@ -6,7 +6,7 @@ class shape
 public:
   int x;
   int y;
-
+ 
   void get_data(int a, int b)
   {
     x = a;
