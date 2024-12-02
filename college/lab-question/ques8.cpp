@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Student
+class Student2
 {
   int scores[5];
 
