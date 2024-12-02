@@ -9,7 +9,7 @@ int largest_proper_divisor(int n)
   {
     throw invalid_argument("the largest proper divisor is not defined for n");
   }
-  return n / 2; // Largest proper divisor for numbers > 1
+  return n / 2; // Largest proper1 divisor for numbers > 1
 }
 
 // Function to process input and handle exceptions
