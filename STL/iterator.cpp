@@ -16,7 +16,7 @@ int main()
   }
   cout << "\n"
        << "another way" << endl;
-  for (ptr = ar.begin(); ptr < ar.end(); ptr++)
+  for (auto ptr = ar.begin(); ptr < ar.end(); ptr++)
     cout << *ptr << " ";
 
   // advance function
