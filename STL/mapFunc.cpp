@@ -49,7 +49,7 @@ int main()
   // Accessing elements with at (throws an exception if the key is not found)
   try
   {
-    int value = map1.at("Five");
+    int value = map1.at("five");
     cout << "Value for key 'Five': " << value << endl;
   }
   catch (const out_of_range &e)

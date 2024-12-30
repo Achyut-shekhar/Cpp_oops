@@ -14,7 +14,7 @@ void display(list<int> &ref)
 int main()
 {
   list<int> list1;
-  list<int> list2(3); // size of the list is 5
+  list<int> list2(3); // size of the list is 3
 
   for (auto i = 0; i < 3; i++)
   {
